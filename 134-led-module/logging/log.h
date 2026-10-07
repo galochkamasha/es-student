@@ -10,11 +10,9 @@
 #define LOG_LEVEL LOG_LEVEL_DBG
 #endif
 
-
 void log_version(void);
 void log_prefix(const char *level, const char *function, int line);
 
-    
 #define LOG_INF(...)                                \
     do                                              \
     {                                               \
@@ -32,9 +30,9 @@ void log_prefix(const char *level, const char *function, int line);
         {                                           \
             log_prefix("err", __func__, __LINE__);  \
             printf(__VA_ARGS__);                    \
-        }                                           \   
+        }                                           \
     } while (0)
-    
+
 #define LOG_DBG(...)                                \
     do                                              \
     {                                               \
